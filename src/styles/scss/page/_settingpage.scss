@@ -1,0 +1,263 @@
+
+.wrapSetting{
+    display: flex;
+    flex-grow:1;
+    position: relative;
+    padding-bottom: 40px;
+    align-items: flex-start;
+}
+.setting{
+    position: relative;
+    &__primary{
+        position:sticky;
+        top:0;
+        z-index: 2;
+        width:211px;
+        padding-left:23px;
+        padding-right:23px;
+
+        &__title{
+            @include _flex(flex-start,center);
+            padding-left:2px;
+            height: 76px;
+            & span{
+                line-height: 32px;
+                font-size:20px;
+                font-weight: bold;
+                color:$primary__black;
+            }
+        }
+        &__body{
+            line-height: 20px!important;
+            &--title{
+            color:$primary__blue;
+            background:white;
+            }
+            &--menu{
+                border:0px !important;
+            }
+            &--itemMenu{
+                margin-top:12px;
+            
+                color:$txt__black1A;
+                @include _flex(flex-start,center);
+                &.ant-menu-item{
+                    padding-left:8px;
+                    font-weight: 400;
+                    height:36px;
+                    &:hover{
+                        color:$primary__blue;
+                        font-weight: 600;
+                    }
+                }
+                &.ant-menu-item-selected{
+                    padding-left: 12px;
+                    height:44px;
+                    font-weight: 600;
+                    color:$primary__blue;
+                }
+            }
+
+        }
+    }
+    &__secondary{
+        flex:1;
+    }
+}
+
+
+/*Monitoring stations*/
+.WrapMonitoringStations{
+    margin-right:24px;
+    & .monitoringStations__header{
+        height:76px;
+        width:100%;
+        @include _flex(space-between,center);
+        border-bottom:1px solid $border__gray;
+        &--title{
+            line-height: 32px;
+            font-size:20px;
+            font-weight: 700;
+        }
+        &--btn{
+           & .btn--CreateMonitoringStations{
+               line-height: 20px;
+               height:40px;
+               width:135px;
+               border-radius: 4px;
+               border:0px;
+               font-weight: 600;
+               background-color:$primary__blue;
+               color:white;
+               @include _flex(center,center);
+               & > span:nth-child(1){
+                   @include _flex(center,center);
+                   margin-right:6.5px;
+               }
+           }
+        }
+    } 
+}
+
+    //Tables
+.WrapMonitoringStations{
+    & .monitoringStationsTable__title{
+        margin-top:15px;
+        height:44px;
+        width:100%;
+        line-height: 20px;
+        font-weight: 600;
+        border-bottom:1px solid $border__gray;
+        @include _flex(flex-start,center);
+        & > *{
+            flex:1,
+        }
+        & > div:nth-child(1){
+            @include _flex(flex-start,center);
+            & > span:nth-child(1){
+                @include _flex(center,center);
+                margin-left: 4px;
+                margin-right: 27px;
+            }
+        }
+        & >div:nth-child(3){
+            flex:3;   
+        }
+    }
+
+}
+
+.monitoringStationsTableAir{
+    &__title{
+        line-height: 20px;
+        font-weight: 600;
+        margin-top:16px;
+        margin-bottom:12px;
+        cursor: pointer;
+        @include _flex(flex-start,center);
+        & > span:nth-child(1){
+            margin-left: 4px;
+            margin-right: 27px;
+            transform:translateY(2px);
+            & > i{
+                display: flex;
+                width: 16px;
+                transition: all .2s linear;
+            &::before,&::after{
+                content:'';
+                width:10px;
+                border-radius: 2px;
+                height:2px;
+                background:black;
+                position: absolute;
+            }
+            &::before{
+                transform: rotate(45deg) translateX(-4.2px);
+                transition: transform .3s linear;
+            }
+            &::after{
+                transform: rotate(-45deg) translateX(4.2px) ;
+                transition: transform .3s linear;
+            }
+        }
+
+            }
+            
+
+    }
+    &__body{
+        transition: all .5s linear;
+        &--item{
+        display: none;
+        line-height: 20px;
+        font-weight: 400;
+        margin-top: 24px;
+        cursor: pointer;
+
+        & > *{
+            flex:1;
+            & > div{
+                @include _flex(flex-start,center);
+                margin-top:12px;
+                margin-bottom: 12px;
+                height: 40px;
+            }
+        }
+        &__code{
+            & div{
+                padding-left: 46px;
+            }
+        }
+        &__address{
+            flex:2;
+            height: inherit;
+            & >div{
+            height:inherit;
+            overflow-y:auto;
+            &::-webkit-scrollbar{
+                width:5px;
+            }
+            &::-webkit-scrollbar-track {
+                background:#f1f1f1;
+            }
+            &::-webkit-scrollbar-thumb {
+                background:$primary__blue;
+                border-radius: 30px;
+            }
+        }
+        }
+        &__status{
+            opacity:0;
+            transition: opacity .3s ease-in;
+            & > div{
+                @include _flex(flex-start,center);
+                & > span:nth-child(1){
+                    @include _flex(center,center);
+                    margin-right:8px;
+                }
+                & > span:nth-child(2){
+                    color:$secondary__green;
+                }
+            }
+        }
+ 
+    }
+
+
+    }
+}
+.active{
+    &.monitoringStationsTableAir__body--item{
+        background: #f9f9f9;
+    }
+
+
+    & .monitoringStationsTableAir__body--item{
+        &__status{
+            opacity: 1;
+        }
+    }
+}
+
+.open{
+    & .monitoringStationsTableAir{
+     &__title {
+        & > span:nth-child(1){
+            & > i{
+                transform:translateY(-6px);
+            &::before{
+                transform: rotate(-45deg) translateX(-4.2px);
+            }
+            &::after{
+                transform: rotate(45deg) translateX(4.2px) ;
+            }
+            }
+        }
+    }
+    &__body{
+        &--item{
+            display: flex;
+        }
+    }
+}
+}
