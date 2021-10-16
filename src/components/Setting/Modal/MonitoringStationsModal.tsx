@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 
-import { ReactComponent as CloseIcon } from "../../../../assets/icons/Close.svg";
+import { ReactComponent as CloseIcon } from "../../../assets/icons/Close.svg";
 import { Menu } from "antd";
-import { ModalContext } from "../../../../store/context/modalContext";
+import { ModalContext } from "../../../store/context/modalContext";
 import MSInformationForm from "../Form/MSInformationForm";
 import OtherForm from "../Form/OtherForm";
 interface listFormModalMS {

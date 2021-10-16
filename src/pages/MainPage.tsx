@@ -1,9 +1,9 @@
 import React from "react";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/layout/Sidebar";
 import { Switch, Route } from "react-router-dom";
 import Setting from "./SettingPage";
 import HomePage from "./HomePage";
-import MonitoringStationsModal from "../components/layout/Setting/Modal/MonitoringStationsModal";
+import MonitoringStationsModal from "../components/Setting/Modal/MonitoringStationsModal";
 import ModalContextProvider from "../store/context/modalContext";
 
 interface _listPage {

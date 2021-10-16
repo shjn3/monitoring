@@ -3,12 +3,12 @@ import { Link, useLocation } from "react-router-dom";
 
 import { Layout, Menu } from "antd";
 
-import Logo from "../assets/images/logo.png";
-import { ReactComponent as MenuIcon } from "../assets/icons/Menu.svg";
-import { ReactComponent as HomeIcon } from "../assets/icons/Home.svg";
-import { ReactComponent as UseDataIcon } from "../assets/icons/UseData.svg";
-import { ReactComponent as TramQuanTracIcon } from "../assets/icons/TramQuanTrac.svg";
-import { ReactComponent as AccountIcon } from "../assets/icons/Account.svg";
+import Logo from "../../assets/images/logo.png";
+import { ReactComponent as MenuIcon } from "../../assets/icons/Menu.svg";
+import { ReactComponent as HomeIcon } from "../../assets/icons/Home.svg";
+import { ReactComponent as UseDataIcon } from "../../assets/icons/UseData.svg";
+import { ReactComponent as TramQuanTracIcon } from "../../assets/icons/TramQuanTrac.svg";
+import { ReactComponent as AccountIcon } from "../../assets/icons/Account.svg";
 
 const { SubMenu } = Menu;
 

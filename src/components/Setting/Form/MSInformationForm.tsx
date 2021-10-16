@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 
 import { Form, Input, Select, Button } from "antd";
-import { ModalContext } from "../../../../store/context/modalContext";
+import { ModalContext } from "../../../store/context/modalContext";
 
 const MSInformationForm = () => {
   const { modalState, closeModal } = useContext(ModalContext);

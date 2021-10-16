@@ -1,7 +1,7 @@
 import React from "react";
-import MenuSetting from "../components/layout/Setting/MenuSetting";
-import TramQuanTracSetting from "../components/layout/Setting/TramQuanTracSetting";
-import OtherSetting from "../components/layout/Setting/OtherSetting";
+import MenuSetting from "../components/Setting/MenuSetting";
+import MonitoringStationsSetting from "../components/Setting/MonitoringStationsSetting";
+import OtherSetting from "../components/Setting/OtherSetting";
 import { Switch, Route } from "react-router-dom";
 import MonitoringStationsProvider from "../store/context/monitoringStationsContext";
 
@@ -14,7 +14,7 @@ const listSetting: __listSetting[] = [
   {
     id: 1,
     path: "/setting/tqt",
-    component: TramQuanTracSetting,
+    component: MonitoringStationsSetting,
   },
   {
     id: 2,
@@ -37,6 +37,7 @@ const listSetting: __listSetting[] = [
     component: OtherSetting,
   },
 ];
+
 const Setting: React.FC = () => {
   return (
     <MonitoringStationsProvider>

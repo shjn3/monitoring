@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
-import { ReactComponent as UnfoldIcon } from "../../../../assets/icons/Unfold.svg";
-import { ReactComponent as ConnectionIcon } from "../../../../assets/icons/Connection.svg";
+import { ReactComponent as UnfoldIcon } from "../../../assets/icons/Unfold.svg";
+import { ReactComponent as ConnectionIcon } from "../../../assets/icons/Connection.svg";
 
-import { MonitoringStationsContext } from "../../../../store/context/monitoringStationsContext";
-import { ModalContext } from "../../../../store/context/modalContext";
+import { MonitoringStationsContext } from "../../../store/context/monitoringStationsContext";
+import { ModalContext } from "../../../store/context/modalContext";
 
 const MonitoringStationsTables: React.FC = () => {
   const { monitoringstationsState } = useContext(MonitoringStationsContext);

@@ -1,10 +1,10 @@
 import React from "react";
 import { Button } from "antd";
 
-import { ReactComponent as PlusIcon } from "../../../assets/icons/Plus.svg";
+import { ReactComponent as PlusIcon } from "../../assets/icons/Plus.svg";
 
 import MonitoringStationsTables from "./Tables/MonitoringStationsTables";
-const TramQuanTracSetting: React.FC = () => {
+const MonitoringStationsSetting: React.FC = () => {
   return (
     <div className="WrapMonitoringStations">
       <div className="monitoringStations__header">
@@ -25,4 +25,4 @@ const TramQuanTracSetting: React.FC = () => {
   );
 };
 
-export default TramQuanTracSetting;
+export default MonitoringStationsSetting;

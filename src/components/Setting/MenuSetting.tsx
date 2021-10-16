@@ -67,29 +67,32 @@ const MenuSetting: React.FC = () => {
         className="setting__primary__body"
         selectedKeys={[valueSelected.toString()]}
       >
-        <div className="setting__primary__body--title fontWeight-600">
-          Kết nối
-        </div>
-        {listMenuItem.slice(0, 3).map((item: any) => (
-          <Menu.Item
-            key={item.key}
-            className="setting__primary__body--itemMenu mgt-20"
-          >
-            <Link to={item.link}>{item.value}</Link>
-          </Menu.Item>
-        ))}
-        <div className="setting__primary__body--title fontWeight-600">
-          Tính toán
-        </div>
-
-        {listMenuItem.slice(3, 5).map((item: any) => (
-          <Menu.Item
-            key={item.key}
-            className="setting__primary__body--itemMenu mgt-20"
-          >
-            <Link to={item.link}>{item.value}</Link>
-          </Menu.Item>
-        ))}
+        <Menu.ItemGroup
+          className="setting__primary__body--itemGroup"
+          title="Kết Nối"
+        >
+          {listMenuItem.slice(0, 3).map((item: any) => (
+            <Menu.Item
+              key={item.key.toString()}
+              className="setting__primary__body--itemMenu mgt-20"
+            >
+              <Link to={item.link}>{item.value}</Link>
+            </Menu.Item>
+          ))}
+        </Menu.ItemGroup>
+        <Menu.ItemGroup
+          className="setting__primary__body--itemGroup"
+          title="Tính toán"
+        >
+          {listMenuItem.slice(3, 5).map((item: any) => (
+            <Menu.Item
+              key={item.key.toString()}
+              className="setting__primary__body--itemMenu mgt-20"
+            >
+              <Link to={item.link}>{item.value}</Link>
+            </Menu.Item>
+          ))}
+        </Menu.ItemGroup>
       </Menu>
     </Layout>
   );

@@ -6,6 +6,7 @@
     padding-bottom: 40px;
     align-items: flex-start;
 }
+/*Menu in setting page*/
 .setting{
     position: relative;
     &__primary{
@@ -29,9 +30,17 @@
         }
         &__body{
             line-height: 20px!important;
-            &--title{
-            color:$primary__blue;
-            background:white;
+            &--itemGroup{
+                & > div{
+                    color:$primary__blue;
+                    background:white;
+                    font-weight: 600;
+                    line-height: 20px;
+                    padding:0;
+                }
+            }
+            &--itemGroup:nth-child(2){
+                margin-top:24px;
             }
             &--menu{
                 border:0px !important;
@@ -99,7 +108,7 @@
     } 
 }
 
-    //Tables
+    //Tables of Monitoring Stations
 .WrapMonitoringStations{
     & .monitoringStationsTable__title{
         margin-top:15px;
@@ -226,19 +235,19 @@
 
     }
 }
+
+//effect when onClick item 
 .active{
     &.monitoringStationsTableAir__body--item{
         background: #f9f9f9;
     }
-
-
     & .monitoringStationsTableAir__body--item{
         &__status{
             opacity: 1;
         }
     }
 }
-
+//Icon arrow down
 .open{
     & .monitoringStationsTableAir{
      &__title {
